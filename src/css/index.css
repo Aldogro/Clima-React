@@ -1,0 +1,124 @@
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+nav .brand-logo {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.input-field label {
+  color: black;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: black;
+} 
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid black;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+input[type=text]:not(.browser-default) {
+  border-bottom: 1px solid black;
+  color: black;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: 0 1px 0 0 black;
+  box-shadow: 0 1px 0 0 black;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]) + label {
+  color: black;
+}
+
+.contenedor-form {
+  padding: 3rem 0 1px 0;
+  background-color: #b2dfdb;
+  color: #000;
+}
+.buscador i {
+  width: 100%;
+  color: #000;
+}
+.error {
+  color:white;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.temperatura {
+  font-size: 1.8em;
+}
+
+.margenTop{
+  background-color: #4db6ac !important;
+  padding: 0px 20px !important;
+  margin-top: 1em;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+.sinMP{
+  padding: 0 20px;
+  border-radius: 8px!important;
+}
+.sinMP h3, p {
+  margin: 0px!important;
+}
+.resultados{
+  background-color: #009688;
+  height: 100%;
+  padding: 20px!important;
+  vertical-align: middle!important;
+}
+
+.borRad{
+  border-radius: 8px!important;
+}
+
+.contenedor-brujula{
+  margin: 0px auto;
+}
+.ccc{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+}
+.contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brujula{
+  position: absolute;
+  width: 5em;
+  height: 5em;
+}
+.agujaSVG{
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  left: 0em;
+  /* width: 0.1em;
+  height: 1.8em; */
+  /* background-color: red; */
+  transition: transform 2s;
+}
+
+.temp{
+  padding: 30px!important;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
+
+.resto{
+  padding: 30px!important;
+}
