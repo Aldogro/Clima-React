@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import brujula from '../images/brujula.svg';
 import aguja from '../images/aguja.svg';
+import sunny from '../images/01-sunny.svg';
+import parciallycloud from '../images/02-parciallysunny.svg';
+import cloudy from '../images/0304-cloudy.svg';
+import lightrain from '../images/10-rainy.svg';
+import veryrainy from '../images/09-veryrainy.svg';
+import thunderstorm from '../images/11-electricstorm.svg';
+import snow from '../images/13-snow.svg';
+import fog from '../images/50-fog.svg';
+import sinIcono from '../images/sinIcono.svg';
 
 class Clima extends Component {
 
@@ -10,8 +19,29 @@ class Clima extends Component {
     if(!name || !weather || !main) return null;
 
     const kelvin = 273.15;
-    const urlIcono = `http://openweathermap.org/img/w/${weather[0].icon}.png`;
     const alt = `clima de ${name}`;
+    var urlIcono;
+
+    // lo hice con un IF porque con un switch eran muchas lineas e iba a ser dificil de leer.
+    if (weather[0].icon === '01d' || weather[0].icon === '01n'){
+      urlIcono = sunny;
+    } else if (weather[0].icon === '02d' || weather[0].icon === '02n'){
+      urlIcono = parciallycloud;
+    } else if (weather[0].icon === '03d' || weather[0].icon === '03n' || weather[0].icon === '04d'|| weather[0].icon === '04n' ){
+      urlIcono = cloudy;
+    } else if (weather[0].icon === '09d' || weather[0].icon === '09n'){
+      urlIcono = veryrainy;
+    } else if (weather[0].icon === '10d' || weather[0].icon === '10n'){
+      urlIcono = lightrain;
+    } else if (weather[0].icon === '11d' || weather[0].icon === '11n'){
+      urlIcono = thunderstorm;
+    } else if (weather[0].icon === '13d' || weather[0].icon === '13n'){
+      urlIcono = snow;
+    } else if (weather[0].icon === '50d' || weather[0].icon === '50n'){
+      urlIcono = fog;
+    } else {
+      urlIcono = sinIcono;
+    }
 
     return(
       <div className="row">
@@ -22,12 +52,13 @@ class Clima extends Component {
               <div className="col l12 m12 s12 resultados">
                 <div className="col l2"></div>
                 <div className="col l4 m6 s12 temp">
-                  <img src={urlIcono} alt={alt}/>
+                  <img src={urlIcono} alt={alt} width="80px"/>
                   <p className="temperatura">
                     <b>Actual: {(main.temp - kelvin).toFixed(2)}&deg;C</b>
                   </p>
                   <h6><b>Max.</b> {(main.temp_max - kelvin).toFixed(2)} &deg;C</h6>
                   <h6><b>Min.</b> {(main.temp_min - kelvin).toFixed(2)} &deg;C</h6>
+                  <p>Algunos cambios para el GitHub</p>
                   </div>
                 <div className="col l4 m6 s12 resto">
                   <div className="white-text">
