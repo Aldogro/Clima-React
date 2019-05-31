@@ -58,7 +58,6 @@ class Clima extends Component {
                   </p>
                   <h6><b>Max.</b> {(main.temp_max - kelvin).toFixed(2)} &deg;C</h6>
                   <h6><b>Min.</b> {(main.temp_min - kelvin).toFixed(2)} &deg;C</h6>
-                  <p>Algunos cambios para el GitHub</p>
                   </div>
                 <div className="col l4 m6 s12 resto">
                   <div className="white-text">
@@ -69,8 +68,8 @@ class Clima extends Component {
                   <div className="contenedor-brujula col s12 m12 l12">
                   <div className="col s12 m12 l12 center-align ccc">
                     <div className="contenedor center-align">
-                      <div id="brujula" className="brujula">
-                        <img src={brujula} alt="brujula-fondo" width="70px"/>
+                      <div id="brujula">
+                        <img src={brujula} alt="brujula-fondo" className="brujula"/>
                         <img src={aguja} alt="aguja" className="agujaSVG" style={{transform :`rotateZ(${wind.deg}deg)`}} />
                       </div>
                     </div>

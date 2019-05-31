@@ -8,6 +8,7 @@ class App extends Component {
 
   state = {
     error: '',
+    notfound:'',
     consulta: {},
     resultado: {}
   }
@@ -20,7 +21,8 @@ class App extends Component {
 
   componentDidMount(){
     this.setState({
-      error: false
+      error: false,
+      notfound: false
     })
   }
 
@@ -33,6 +35,15 @@ class App extends Component {
     // realizar el query con fetch api
     fetch(url)
       .then(respuesta => {
+        if (respuesta.status !== 200){
+          this.setState({
+            notfound: true
+          })
+        } else {
+          this.setState({
+            notfound: false
+          })
+        }
         return respuesta.json();
       })
       .then(datos => {
@@ -61,11 +72,13 @@ class App extends Component {
   render(){
 
     const error = this.state.error;
-
+    const notfound = this.state.notfound;
     let resultado;
 
     if (error) {
       resultado = <Error mensaje = 'Todos los campos son obligatorios' />
+    } else if(notfound){
+      resultado = <Error mensaje = 'La ciudad que buscás no se encuentra' />
     } else {
       resultado = <Clima resultado = {this.state.resultado} />
     }
