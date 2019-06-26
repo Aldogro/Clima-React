@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "./static/css/main.2adc67af.chunk.css",
+    "main.js": "./static/js/main.9a874dd2.chunk.js",
+    "main.js.map": "./static/js/main.9a874dd2.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
+    "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
+    "static/js/2.def297ae.chunk.js": "./static/js/2.def297ae.chunk.js",
+    "static/js/2.def297ae.chunk.js.map": "./static/js/2.def297ae.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.8d398c86b7a1e023ad276817d81e8d9c.js": "./precache-manifest.8d398c86b7a1e023ad276817d81e8d9c.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.2adc67af.chunk.css.map": "./static/css/main.2adc67af.chunk.css.map",
+    "static/media/01-sunny.svg": "./static/media/01-sunny.28326381.svg",
+    "static/media/02-parciallysunny.svg": "./static/media/02-parciallysunny.f0de1c91.svg",
+    "static/media/0304-cloudy.svg": "./static/media/0304-cloudy.295786be.svg",
+    "static/media/09-veryrainy.svg": "./static/media/09-veryrainy.109bab6d.svg",
+    "static/media/10-rainy.svg": "./static/media/10-rainy.cb8685e2.svg",
+    "static/media/11-electricstorm.svg": "./static/media/11-electricstorm.99bb1ef9.svg",
+    "static/media/13-snow.svg": "./static/media/13-snow.5b94eb75.svg",
+    "static/media/50-fog.svg": "./static/media/50-fog.0d56e06d.svg",
+    "static/media/aguja.svg": "./static/media/aguja.0eff60f2.svg",
+    "static/media/brujula.svg": "./static/media/brujula.c26dfab1.svg",
+    "static/media/sinIcono.svg": "./static/media/sinIcono.91ae921e.svg"
+  }
+}
